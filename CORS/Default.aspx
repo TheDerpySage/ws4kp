@@ -20,6 +20,8 @@
             case "192.168.2.98":
             case "24.187.197.234":
             case "battaglia.ddns.net":
+            case "nagato.thederpysage.com":
+            case "192.168.1.2"
                 OkToProcessRequest = true;
                 break;
         }

@@ -3492,7 +3492,7 @@ $(function ()
 
                 //http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?location=-72.971293%2C+40.850043&f=pjson
                 request = $.ajax({
-                    url: location.protocol + '//geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode',
+                    url: 'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode',
                     data: {
                         location: Longitude + "," + Latitude,
                         distance: 1000, // Find location upto 1 KM.
@@ -4048,7 +4048,7 @@ var _PlayMsOffsets = {
     LatestObservations_Loaded: false,
     TravelForecast_Start: 0,
     TravelForecast_End: 0,
-    TravelForecast_Length: 60000,
+    TravelForecast_Length: 10000,
     TravelForecast_Loaded: false,
     RegionalForecast1_Start: 0,
     RegionalForecast1_End: 0,
@@ -4096,7 +4096,7 @@ var _PlayMsOffsets = {
     Outlook_Loaded: false,
     LocalRadar_Start: 0,
     LocalRadar_End: 0,
-    LocalRadar_Length: 15000,
+    LocalRadar_Length: 20000,
     LocalRadar_Loaded: false,
     Hazards_Start: 0,
     Hazards_End: 0,
@@ -4581,7 +4581,8 @@ var UpdatePlayPosition = function ()
         if (SubMs >= 3000)
         {
             //y += 1;
-            _UpdateTravelCitiesY = 3 * ((SubMs - 3000) / _PlayInterval);
+            // Comment out to stop scrolling
+            //_UpdateTravelCitiesY = 3 * ((SubMs - 3000) / _PlayInterval);
         }
         if (_UpdateTravelCitiesY > cnvTravelCitiesScroll.height() - 289)
         {
