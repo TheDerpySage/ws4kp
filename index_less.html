@@ -42,13 +42,13 @@
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
-<body onload="hideStuff()">
+<body>
 
     <!--<a href="https://github.com/vbguyny/ws4kp"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>-->
 
     <div id="divQuery">
         <form id="frmGetLatLng">
-            <input id="txtAddress" type="text" value="Cedar Falls, IA, USA" placeholder="Zip or City, State" /><button id="btnGetGps" type="button" title="Get GPS Location"><img id="imgGetGps" src="images/nav/gps_fixed_black_24dp.svg" /></button>
+            <input id="txtAddress" type="text" value="" placeholder="Zip or City, State" /><button id="btnGetGps" type="button" title="Get GPS Location"><img id="imgGetGps" src="images/nav/gps_fixed_black_24dp.svg" /></button>
             <input id="btnGetLatLng" type="submit" value="GO" />
             <input id="btnClearQuery" type="reset" value="Reset" />
         </form>
@@ -227,11 +227,5 @@
         </form><br />
         <input id="chkScrollHazardText" name="chkScrollHazardText" type="checkbox" /><label id="lblScrollHazardText" for="chkScrollHazardText">Hazardous Weather</label>
     </div>
-<script>
-function hideStuff(){
-	var elmnt = document.getElementById("divQuery");
-        elmnt.style.display = "none";
-}
-</script>
 </body>
 </html>
